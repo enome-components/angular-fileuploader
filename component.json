@@ -1,0 +1,25 @@
+{
+  "name": "fileuploader",
+  "repo": "enome-component/angular-fileuploader",
+  "description": "File uploader directives for angular.js",
+  "version": "1.0.0",
+  "keywords": ["angular", "directive", "fileuploader", "drag", "drop"],
+  "dependencies": {
+    "enome-components/angular-dnd-directives": "*",
+    "component/normalized-upload": "*",
+    "component/upload": "*",
+    "necolas/normalize.css": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js",
+    "js/directives.js",
+    "js/controllers.js",
+    "js/utils.js"
+  ],
+  "styles": [
+    "fileuploader.css"
+  ]
+}

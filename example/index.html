@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='my-app'>
+  <head>
+    <title>enome-component/angular-fileuploader</title>
+    <link href='build/build.css' rel='stylesheet' type='text/css' />
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js'></script>
+    <script src='build/build.js'></script>
+    <script>
+      require('fileuploader');
+      var module = angular.module('my-app', ['fileuploader']);
+
+      module.controller('Ctrl', function ($scope) {
+
+        $scope.toggle = function () {
+          $scope.show = !$scope.show;
+        }
+
+        $scope.files = [];
+
+        $scope.$watch('files', function (val) {
+          console.log(val);
+        });
+
+      });
+    </script>
+    <style>
+      body { margin: 20px; }
+    </style>
+  </head>
+  <body ng-controller='Ctrl'>
+    <button ng-click='toggle()'>toggle</button>
+    <fileuploader url='/upload' files='files' visible='show'></fileuploader>
+  </body>
+</html>

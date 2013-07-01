@@ -1,0 +1,29 @@
+<div class='fileuploader' ng-show='visible'>
+  <div class='files'>
+    <table>
+      <tr ng-repeat='file in files'>
+        <td>
+          {{file.name}}
+        </td>
+        <td>
+          <span ng-hide='hasError(file)'>{{file.progress||'0'}}/100%</span>
+          <span class='error' ng-show='hasError(file)'>
+            {{file.event.status}} - {{file.event.statusText}}
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class='droparea' ng-class='class' dragover='dragover($event)' dragleave='dragleave()' drop='drop($event)'>
+    <div>
+      Drag and drop files.
+    </div>
+  </div>
+
+  <div class='actionbar'>
+    <div>
+    <button ng-click='upload()'>Upload</button>
+    <button ng-click='toggle()'>Close</button>
+  </div>
+</div>

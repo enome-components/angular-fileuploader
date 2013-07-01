@@ -1,0 +1,52 @@
+.fileuploader {
+  background: #DDDDDD;
+  width: 800px;
+  padding: 40px 20px 20px;
+}
+
+.fileuploader .files {
+  height: 240px;
+  overflow-y: auto;
+  background: white;
+}
+
+.fileuploader .files table {
+  width: 100%;
+}
+
+.fileuploader .files table td {
+  padding: 10px 20px;
+  border-bottom: 1px solid #DDDDDD;
+  font-size: .8em;
+}
+
+.fileuploader .files table td:last-child {
+  width: 150px;
+  text-align: right;
+}
+
+.fileuploader .files table td .error {
+  color: red;
+}
+
+.fileuploader .droparea {
+  padding: 10px;
+  background: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.fileuploader .droparea div {
+  border: 2px dashed #DDD;
+}
+
+.fileuploader .droparea.enter div {
+  background: white;
+  background: #ddd;
+}
+
+.fileuploader .actionbar {
+  background: #AAAAAA;
+  padding: 10px;
+  text-align: right;
+}
